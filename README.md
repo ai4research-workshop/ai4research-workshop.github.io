@@ -1,1 +1,1 @@
-# AI4Research-workshop
+# AI4Research @ AAAI2026
