@@ -86,9 +86,10 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#topic">Topics</a></li>
-          <li><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
           <!-- <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li> -->
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
+          <li><a class="nav-link scrollto" href="#accepted-paper">Accepted Papers</a></li>
+          <li><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
           <li><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -217,6 +218,30 @@
     </section>
     <!-- End Topics Section -->
 
+    <!-- ======= Schedule Section ======= -->
+    <section id="schedule">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Schedule</h2>
+          <p>To be announced</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Schedule Section -->
+
+    <!-- ======= Accepted Papers ======= -->
+    <section id="accepted-paper" class="section-with-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Accepted Papers</h2>
+        </div>
+        <div id="poster-presentations">
+          <ul id="posterList"></ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Accepted Papers -->
+
     <section id="cfp">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
@@ -315,17 +340,6 @@
     </section>
     <-- End Speakers Section ->
     -->
-
-    <!-- ======= Schedule Section ======= -->
-    <section id="schedule">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Schedule</h2>
-          <p>To be announced</p>
-        </div>
-      </div>
-    </section>
-    <!-- End Schedule Section -->
 
     <section id="organizers">
       <div class="container" data-aos="fade-up">
@@ -439,41 +453,112 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- ======= Dynamic Loading Script ======= -->
+  <!-- ======= Accepted Papers: load on page load ======= -->
   <script>
-    // This example assumes accepted_paper.json is located in the same directory as your HTML file.
-    // Adjust the path as necessary.
-    fetch('accepted_paper.json')
-      .then(response => response.json())
-      .then(data => {
-        const posterList = document.getElementById('posterList');
-        
-        // In the snippet, the data in accepted_paper.json is an object with a "notes" array
-        // that holds the accepted papers
-        const notes = data.notes;  // e.g. data.notes = [{ content: {...}, ...}, ...]
+    document.addEventListener('DOMContentLoaded', function () {
+      const list = document.getElementById('posterList');
+      if (!list) return;
 
-        notes.forEach(item => {
-          const title = item.content.title.value;
-          // Authors may be stored as an array in item.content.authors.value or a single string, depending on your JSON
-          // If it's an array, join them
-          const authorsVal = item.content.authors.value;
-          let authors = Array.isArray(authorsVal) ? authorsVal.join(", ") : authorsVal;
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
 
-          const li = document.createElement('li');
-          li.innerHTML = `
-            <b>${title}</b><br>
-            Authors: ${authors}
-          `;
-          posterList.appendChild(li);
+      function parseCsv(text) {
+        const rows = [];
+        let row = [];
+        let field = '';
+        let inQuotes = false;
 
-          // Add some spacing after each paper
-          const br = document.createElement('br');
-          posterList.appendChild(br);
+        for (let i = 0; i < text.length; i++) {
+          const c = text[i];
+
+          if (inQuotes) {
+            if (c === '"') {
+              const next = text[i + 1];
+              if (next === '"') {
+                field += '"';
+                i++;
+              } else {
+                inQuotes = false;
+              }
+            } else {
+              field += c;
+            }
+            continue;
+          }
+
+          if (c === '"') {
+            inQuotes = true;
+          } else if (c === ',') {
+            row.push(field);
+            field = '';
+          } else if (c === '\n') {
+            row.push(field);
+            rows.push(row);
+            row = [];
+            field = '';
+          } else if (c !== '\r') {
+            field += c;
+          }
+        }
+
+        if (field.length || row.length) {
+          row.push(field);
+          rows.push(row);
+        }
+
+        return rows;
+      }
+
+      function normalizeAuthors(authorsRaw) {
+        const raw = (authorsRaw || '').trim();
+        if (!raw) return '';
+        return raw
+          .split(';')
+          .map(function (s) { return s.trim(); })
+          .filter(Boolean)
+          .join(', ');
+      }
+
+      function fetchFirstOk(urls) {
+        return Promise.resolve().then(function () {
+          return urls.reduce(function (p, url) {
+            return p.catch(function () {
+              return fetch(url).then(function (r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url);
+                return r.text();
+              });
+            });
+          }, Promise.reject(new Error('no urls attempted')));
         });
-      })
-      .catch(error => {
-        console.error('Error loading accepted_paper.json:', error);
-      });
+      }
+
+      fetchFirstOk(['accepted_papers.csv', 'accepted_paper.csv'])
+        .then(function (csvText) {
+          const rows = parseCsv(csvText);
+          rows.slice(1).forEach(function (cols) {
+            const titleRaw = (cols && cols[1]) ? cols[1] : '';
+            const authorsRaw = (cols && cols[3]) ? cols[3] : '';
+
+            const title = titleRaw.replace(/\s+/g, ' ').trim();
+            const authors = normalizeAuthors(authorsRaw);
+            if (!title) return;
+
+            const li = document.createElement('li');
+            li.innerHTML = '<b>' + escapeHtml(title) + '</b><br>' + escapeHtml(authors);
+            list.appendChild(li);
+            list.appendChild(document.createElement('br'));
+          });
+        })
+        .catch(function (err) {
+          console.error('Error loading accepted papers CSV:', err);
+        });
+    });
   </script>
 
   <a href="https://info.flagcounter.com/fIO5"><img src="https://s05.flagcounter.com/count2/fIO5/bg_FFFFFF/txt_000000/border_CCCCCC/columns_6/maxflags_20/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
