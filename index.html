@@ -542,13 +542,18 @@
           rows.slice(1).forEach(function (cols) {
             const titleRaw = (cols && cols[1]) ? cols[1] : '';
             const authorsRaw = (cols && cols[3]) ? cols[3] : '';
+            const isOral = (cols && cols[5] && cols[5].trim().toLowerCase() === 'oral');
 
             const title = titleRaw.replace(/\s+/g, ' ').trim();
             const authors = normalizeAuthors(authorsRaw);
             if (!title) return;
 
             const li = document.createElement('li');
-            li.innerHTML = '<b>' + escapeHtml(title) + '</b><br>' + escapeHtml(authors);
+            let inner = '<b>' + escapeHtml(title) + '</b>';
+            if (isOral) {
+              inner += ' <span style="color: red; font-weight: bold;">(Oral)</span>';
+            }
+            li.innerHTML = inner + '<br>' + escapeHtml(authors);
             list.appendChild(li);
             list.appendChild(document.createElement('br'));
           });
