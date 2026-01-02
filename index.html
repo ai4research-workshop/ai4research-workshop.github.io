@@ -549,27 +549,32 @@
             const authors = normalizeAuthors(authorsRaw);
             if (!title) return;
 
-            const li = document.createElement('li');
-            let inner = '<b>' + escapeHtml(title) + '</b>';
-            
             // Time mapping
             let timeInfo = '';
+            let presentationType = '';
+            
             if (isOral) {
+                presentationType = 'Oral Presentation';
                 // Determine Oral number from presentationId e.g. "Oral 1"
-                if (presentationId === 'Oral 1') timeInfo = ' (14:00 - 14:15)';
-                else if (presentationId === 'Oral 2') timeInfo = ' (14:15 - 14:30)';
-                else if (presentationId === 'Oral 3') timeInfo = ' (14:30 - 14:45)';
-                else if (presentationId === 'Oral 4') timeInfo = ' (16:30 - 16:45)';
-                else if (presentationId === 'Oral 5') timeInfo = ' (16:45 - 17:00)';
-                
-                inner += ' <span style="color: red; font-weight: bold;">(Oral' + timeInfo + ')</span>';
+                if (presentationId === 'Oral 1') timeInfo = '14:00 - 14:15';
+                else if (presentationId === 'Oral 2') timeInfo = '14:15 - 14:30';
+                else if (presentationId === 'Oral 3') timeInfo = '14:30 - 14:45';
+                else if (presentationId === 'Oral 4') timeInfo = '16:30 - 16:45';
+                else if (presentationId === 'Oral 5') timeInfo = '16:45 - 17:00';
             } else if (presentationId.startsWith('Poster')) {
-                if (presentationId === 'Poster 1') timeInfo = ' (10:20 - 11:20)';
-                else if (presentationId === 'Poster 2') timeInfo = ' (14:50 - 15:50)';
-                inner += ' <span style="color: blue; font-weight: bold;">(' + presentationId + timeInfo + ')</span>';
+                presentationType = 'Poster Presentation';
+                if (presentationId === 'Poster 1') timeInfo = '10:20 - 11:20';
+                else if (presentationId === 'Poster 2') timeInfo = '14:50 - 15:50';
             }
 
-            li.innerHTML = inner + '<br>' + escapeHtml(authors);
+            const li = document.createElement('li');
+            li.innerHTML = '<b>' + escapeHtml(title) + '</b><br>' + escapeHtml(authors);
+            
+            if (timeInfo) {
+                const colorStyle = isOral ? 'color: red;' : 'color: blue;';
+                li.innerHTML += '<br><span style="' + colorStyle + ' font-weight: bold;">' + presentationType + ' - ' + timeInfo + '</span>';
+            }
+            
             list.appendChild(li);
             list.appendChild(document.createElement('br'));
           });
