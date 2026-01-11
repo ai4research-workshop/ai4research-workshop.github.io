@@ -672,6 +672,7 @@
             const authorsRaw = (cols && cols[3]) ? cols[3] : '';
             const isOral = (cols && cols[5] && cols[5].trim().toLowerCase() === 'oral');
             const presentationId = (cols && cols[6]) ? cols[6].trim() : '';
+            const wsId = (cols && cols[7]) ? cols[7].trim() : '';
 
             const title = titleRaw.replace(/\s+/g, ' ').trim();
             const authors = normalizeAuthors(authorsRaw);
@@ -691,6 +692,9 @@
                 else if (presentationId === 'Oral 5') timeInfo = '16:45 - 17:00';
             } else if (presentationId.startsWith('Poster')) {
                 presentationType = 'Poster Presentation';
+                if (wsId) {
+                    presentationType += ' (' + wsId + ')';
+                }
                 if (presentationId === 'Poster 1') timeInfo = '10:20 - 11:20';
                 else if (presentationId === 'Poster 2') timeInfo = '14:50 - 15:50';
             }
