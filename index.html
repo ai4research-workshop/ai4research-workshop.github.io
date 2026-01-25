@@ -59,6 +59,37 @@
         padding: 10px;
       }
     }
+
+    /* Slides 小方块 */
+    .slides-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 20px;
+      padding: 0 6px;
+      margin-left: 10px;
+      border: 1px solid #00356B;
+      border-radius: 3px;
+      font-size: 12px;
+      line-height: 1;
+      color: #00356B;
+      background: #fff;
+      text-decoration: none;
+      vertical-align: middle;
+      user-select: none;
+    }
+    .slides-box:hover,
+    .slides-box:focus {
+      background: #00356B;
+      color: #fff;
+      text-decoration: none;
+    }
+    .slides-box.slides-box--disabled,
+    .slides-box[aria-disabled="true"] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
   </style>
   <!-- =======================================================
   * Template Name: TheEvent
@@ -356,6 +387,7 @@
                 <a data-bs-toggle="collapse" href="#abstract-peter" role="button" aria-expanded="false" aria-controls="abstract-peter" style="text-decoration: none; color: inherit; font-style: italic;">
                   Title: From Research Tools to Long-Horizon AI-Assisted Science <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                 </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="assets/slides/talk_peter.pdf" title="Slides (TBA)">slides</a>
                 <div class="collapse mt-2" id="abstract-peter">
                   <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
                     <b>Abstract:</b> AI has made remarkable progress in assisting with individual scientific tasks over the past two years. However, today's systems still fall far short of supporting the kind of long-horizon, "big science" research that unfolds over weeks or months. In this talk, I'll present our work on Asta, a state-of-the-art AI research assistant that performs a wide range of research tasks, and aims to scale toward long-term scientific support. I'll first illustrate Asta's current capabilities in literature understanding, data analysis, theory formation, and end-to-end autonomous software experiments. I'll then discuss what it takes to extend these capabilities to long-horizon research. If we view science as a search for predictive theories and causal explanations, then true long-term AI assistance requires a tight integration of experimentation and analysis with theory formation. I'll argue that this, in turn, demands a layer of structured reasoning above basic tool use to track hypotheses, evidence, and next experimental steps. I'll describe AutoDiscovery, our current work in this direction, then sketch our longer-term trajectory, and finally offer a perspective on the exciting future of long-horizon AI-assisted science.
@@ -370,6 +402,7 @@
                 <a data-bs-toggle="collapse" href="#abstract-yue" role="button" aria-expanded="false" aria-controls="abstract-yue" style="text-decoration: none; color: inherit; font-style: italic;">
                   Title: AI-driven Research Automation <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                 </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="assets/slides/talk_yue.pdf" title="Slides (TBA)">slides</a>
                 <div class="collapse mt-2" id="abstract-yue">
                   <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
                     <b>Abstract:</b> Recently, AI has enabled efficiency tools to be developed for expediting research. Various agents have been built for automating literature review, idea generation, academic writing, and scholarly reviewing. Agents have also been constructed for automating the whole research pipeline. In this talk, I will share our research work along this line, covering work in two directions. First, I will discuss work on facilitating the review and publication paradigm, discussing how AI can be useful for recommending literature, making surveys and giving automated reviews. Second, I will discuss some efforts towards building automated AI scientists.
@@ -386,8 +419,9 @@
               <td>
                 Invited Talk by <b style="color: #00356B;">Chen Zhao</b><br>
                 <a data-bs-toggle="collapse" href="#abstract-chen" role="button" aria-expanded="false" aria-controls="abstract-chen" style="text-decoration: none; color: inherit; font-style: italic;">
-                  Title: AI for Scientific Research with better agentic search systems <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                  Title: AI for Scientific Research with Better Agentic Search Systems <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                 </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="assets/slides/talk_chen.pptx" title="Slides (TBA)">slides</a>
                 <div class="collapse mt-2" id="abstract-chen">
                   <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
                     <b>Abstract:</b> Agentic search systems such as OpenAI’s deep research have been widely deployed in AI for Scientific Research. Despite promising capabilities, today’s agentic search systems remain far from reliable, one of the pronouncing capacities is that they often retrieve irrelevant or redundant evidence. In this talk, I will discuss our recent efforts toward building better agentic search systems from different perspectives : 1) using text diffusion model as new promising architecture. 2) Benchmarking and Improving Retrieval for Deep Research Agents in Scientific Literature search.  I will discuss some future directions in the end of the talk.
@@ -402,6 +436,7 @@
                 <a data-bs-toggle="collapse" href="#abstract-chenglei" role="button" aria-expanded="false" aria-controls="abstract-chenglei" style="text-decoration: none; color: inherit; font-style: italic;">
                   Title: Towards Automated AI Research <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                 </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="assets/slides/talk_chenglei.pdf" title="Slides (TBA)">slides</a>
                 <div class="collapse mt-2" id="abstract-chenglei">
                   <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
                     <b>Abstract:</b> Automated AI research holds great potential for accelerating scientific discovery and recursive self-improvement. In this talk, we first present a large-scale human study that rigorously examines whether LLMs can generate novel and effective research ideas. Then, we introduce our latest work on execution-grounded automated AI research, where LLMs propose ideas, implement them as code, run experiments on GPU clusters, and continuously learn from the execution results.  
@@ -420,6 +455,7 @@
                 <a data-bs-toggle="collapse" href="#abstract-may" role="button" aria-expanded="false" aria-controls="abstract-may" style="text-decoration: none; color: inherit; font-style: italic;">
                   Title: Building the Autonomous Research Scientist: From Exploration Mechanisms to Scholarly Integrity <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                 </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="assets/slides/talk_may.pdf" title="Slides (TBA)">slides</a>
                 <div class="collapse mt-2" id="abstract-may">
                   <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
                     <b>Abstract:</b> The vision of an AI scientist, an agent that can autonomously discover, synthesize, and communicate new knowledge, is rapidly advancing beyond proof-of-concept. However, building such agents requires solving critical challenges at multiple stages of the research pipeline. In this talk, we will present a trilogy of works that address these core challenges. First, we will introduce Webwatcher, a vision-language deep research agent that breaks new frontiers by actively exploring and grounding its knowledge in real-world digital environments, moving beyond passive text analysis. Second, we will discuss our comprehensive survey, "Exploring Agentic MLLMs: A Survey for AIScientists", which provides the essential roadmap for AI scientists in terms of structuring the architectures and capabilities needed for such multimodal autonomous systems. Finally, I will address the cornerstone of scholarly trust: attribution. We will present CiteGuard, a novel framework for faithful citation validation that ensures the outputs of AI research agents are verifiable and credible. Together, these works form a cohesive vision for the next generation of AI4Research, where agents are not just tools for literature review, but active, trustworthy partners in the scientific process, capable of perception, synthesis, and rigorous scholarly communication.
@@ -442,6 +478,7 @@
                 <a data-bs-toggle="collapse" href="#abstract-kan" role="button" aria-expanded="false" aria-controls="abstract-kan" style="text-decoration: none; color: inherit; font-style: italic;">
                   Title: The Research Manifold <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                 </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="assets/slides/talk_minyen.pdf" title="Slides (TBA)">slides</a>
                 <div class="collapse mt-2" id="abstract-kan">
                   <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
                     <b>Abstract:</b> Imagine research as a complex, multidimensional vector space where human researchers are partially observable points in this space, with vectors of velocity and acceleration mapping, and where their new discoveries and publications mark observations. This research manifold is now being disrupted by the new entrant of artificially intelligent agents and tools. I describe my thoughts on some of the challenges ahead, as we progress to centaur-like human–AI research teams.
@@ -701,6 +738,7 @@
         .then(function (csvText) {
           const rows = parseCsv(csvText);
           rows.slice(1).forEach(function (cols) {
+            const paperId = (cols && cols[0]) ? String(cols[0]).trim() : '';
             const titleRaw = (cols && cols[1]) ? cols[1] : '';
             const authorsRaw = (cols && cols[3]) ? cols[3] : '';
             const isOral = (cols && cols[5] && cols[5].trim().toLowerCase() === 'oral');
@@ -734,7 +772,14 @@
             }
 
             const li = document.createElement('li');
-            li.innerHTML = '<b>' + escapeHtml(title) + '</b><br>' + escapeHtml(authors);
+            let slidesHtml = '';
+            if (isOral) {
+              // 约定：把对应 PDF 放到 assets/slides/<paperId>.pdf
+              // 默认先占位；若文件存在，会在页面加载后自动变成可点击
+              const oralSlidesHref = 'assets/slides/' + encodeURIComponent(paperId) + '.pdf';
+              slidesHtml = ' <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="' + oralSlidesHref + '" title="Slides (TBA)" data-paper-id="' + escapeHtml(paperId) + '">slides</a>';
+            }
+            li.innerHTML = '<b>' + escapeHtml(title) + '</b>' + slidesHtml + '<br>' + escapeHtml(authors);
             
             if (timeInfo) {
                 const colorStyle = isOral ? 'color: red;' : 'color: blue;';
@@ -748,6 +793,30 @@
         .catch(function (err) {
           console.error('Error loading accepted papers CSV:', err);
         });
+    });
+
+    // Slides：默认占位；若对应文件存在则自动启用链接
+    window.addEventListener('load', function () {
+      const slidesLinks = document.querySelectorAll('a.slides-box[data-slides-href]');
+      slidesLinks.forEach(function (a) {
+        const href = a.getAttribute('data-slides-href');
+        if (!href) return;
+
+        // 只在文件存在时启用（同源静态资源）
+        fetch(href, { method: 'HEAD' })
+          .then(function (r) {
+            if (!r.ok) throw new Error('not found');
+            a.classList.remove('slides-box--disabled');
+            a.removeAttribute('aria-disabled');
+            a.setAttribute('href', href);
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+            a.setAttribute('title', 'Slides: ' + href);
+          })
+          .catch(function () {
+            // 保持占位即可
+          });
+      });
     });
   </script>
 
