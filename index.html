@@ -52,7 +52,7 @@
     .schedule-table tbody tr:hover {
       background-color: #f1f1f1;
     }
-    /* 响应式设计 */
+    /* Responsive design */
     @media (max-width: 768px) {
       .schedule-table th,
       .schedule-table td {
@@ -60,7 +60,7 @@
       }
     }
 
-    /* Slides 小方块 */
+    /* Slides badge */
     .slides-box {
       display: inline-flex;
       align-items: center;
@@ -774,10 +774,10 @@
             const li = document.createElement('li');
             let slidesHtml = '';
             if (isOral) {
-              // 约定：把对应 PDF 放到 assets/slides/<paperId>.pdf
-              // 默认先占位；若文件存在，会在页面加载后自动变成可点击
-              const oralSlidesHref = 'assets/slides/' + encodeURIComponent(paperId) + '.pdf';
-              slidesHtml = ' <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="' + oralSlidesHref + '" title="Slides (TBA)" data-paper-id="' + escapeHtml(paperId) + '">slides</a>';
+              // Convention: put slides at assets/slides/<paperId>.(pdf|pptx|ppt)
+              // Default is a disabled placeholder; becomes clickable if file exists
+              const oralSlidesBase = 'assets/slides/' + encodeURIComponent(paperId);
+              slidesHtml = ' <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-base="' + oralSlidesBase + '" title="Slides (TBA)" data-paper-id="' + escapeHtml(paperId) + '">slides</a>';
             }
             li.innerHTML = '<b>' + escapeHtml(title) + '</b>' + slidesHtml + '<br>' + escapeHtml(authors);
             
@@ -795,27 +795,35 @@
         });
     });
 
-    // Slides：默认占位；若对应文件存在则自动启用链接
+    // Slides: disabled by default; auto-enable if file exists
     window.addEventListener('load', function () {
-      const slidesLinks = document.querySelectorAll('a.slides-box[data-slides-href]');
+      const slidesLinks = document.querySelectorAll('a.slides-box[data-slides-href], a.slides-box[data-slides-base]');
       slidesLinks.forEach(function (a) {
-        const href = a.getAttribute('data-slides-href');
-        if (!href) return;
+        const explicitHref = a.getAttribute('data-slides-href');
+        const base = a.getAttribute('data-slides-base');
+        const candidates = explicitHref
+          ? [explicitHref]
+          : (base ? [base + '.pdf', base + '.pptx', base + '.ppt'] : []);
+        if (!candidates.length) return;
 
-        // 只在文件存在时启用（同源静态资源）
-        fetch(href, { method: 'HEAD' })
-          .then(function (r) {
-            if (!r.ok) throw new Error('not found');
-            a.classList.remove('slides-box--disabled');
-            a.removeAttribute('aria-disabled');
-            a.setAttribute('href', href);
-            a.setAttribute('target', '_blank');
-            a.setAttribute('rel', 'noopener noreferrer');
-            a.setAttribute('title', 'Slides: ' + href);
-          })
-          .catch(function () {
-            // 保持占位即可
+        // Enable only if the file exists (same-origin static assets)
+        candidates.reduce(function (p, href) {
+          return p.catch(function () {
+            return fetch(href, { method: 'HEAD' }).then(function (r) {
+              if (!r.ok) throw new Error('not found');
+              a.classList.remove('slides-box--disabled');
+              a.removeAttribute('aria-disabled');
+              a.setAttribute('href', href);
+              a.setAttribute('target', '_blank');
+              a.setAttribute('rel', 'noopener noreferrer');
+              a.setAttribute('title', 'Slides: ' + href);
+              return true;
+            });
           });
+        }, Promise.reject(new Error('no candidates')))
+        .catch(function () {
+          // Keep placeholder
+        });
       });
     });
   </script>
