@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AAAI 2026 Workshop on AI for Scientific Research</title>
+  <meta name="description" content="The first AI for Scientific Research Workshop at AAAI 2026, Singapore. Explore the program, accepted papers, awards, slides, and recording.">
+  <link rel="canonical" href="https://ai4research-workshop.github.io/2026/">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  
+  <!-- Custom CSS for Schedule Table -->
+  <style>
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+    .schedule-table th,
+    .schedule-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+    .schedule-table th {
+      background-color: #f7f7f7;
+      font-weight: bold;
+    }
+    .schedule-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .schedule-table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .schedule-table th,
+      .schedule-table td {
+        padding: 10px;
+      }
+    }
+
+    /* Slides badge */
+    .slides-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 20px;
+      padding: 0 6px;
+      margin-left: 10px;
+      border: 1px solid #00356B;
+      border-radius: 3px;
+      font-size: 12px;
+      line-height: 1;
+      color: #00356B;
+      background: #fff;
+      text-decoration: none;
+      vertical-align: middle;
+      user-select: none;
+    }
+    .slides-box:hover,
+    .slides-box:focus {
+      background: #00356B;
+      color: #fff;
+      text-decoration: none;
+    }
+    .slides-box.slides-box--disabled,
+    .slides-box[aria-disabled="true"] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    /* Workshop recording box */
+    .recording-box {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 14px 16px;
+      border: 1px solid rgba(0, 53, 107, 0.25);
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      max-width: 520px;
+    }
+    .recording-box__title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #00356B;
+    }
+    .recording-box__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 12px;
+      border: 1px solid #00356B;
+      border-radius: 8px;
+      color: #00356B;
+      text-decoration: none;
+      font-weight: 600;
+      background: #fff;
+    }
+    .recording-box__link:hover,
+    .recording-box__link:focus {
+      background: #00356B;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+  <!-- =======================================================
+  * Template Name: TheEvent
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+
+      <div id="logo" class="me-auto">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
+        <a href="./" style="color: #fff; font-size: 22px; font-weight: 700;">AI4Research <span style="font-weight: 400;">2026</span></a>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="../">2027 Edition ↗</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#topic">Topics</a></li>
+          <li><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
+          <li><a class="nav-link scrollto" href="#speakers">Invited Speakers</a></li>
+          <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
+          <li><a class="nav-link scrollto" href="#accepted-paper">Accepted Papers</a></li>
+          <li><a class="nav-link scrollto" href="#paper-awards">Paper Awards</a></li>
+          <li><a class="nav-link scrollto" href="#maps">AAAI-26 Map</a></li>
+          <li><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="200">
+      <h1 class="mb-4 pb-0" style="text-transform: none;">
+        AAAI 2026 Workshop on <br>AI for Scientific Research
+      </h1>
+      <p style="font-size: 28px; color: rgba(255, 255, 255, 0.9); margin-top: 25px; font-weight: 300; letter-spacing: 0.5px;">
+        January 26, 2026<br>
+        Garnet Meeting Room 214, Singapore EXPO
+      </p>
+      <p style="font-size: 16px;">2026 archive · <a href="../" style="color: #fff; text-decoration: underline;">Visit the 2027 edition →</a></p>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container position-relative" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>About The Workshop</h2>
+            <p style="font-size: 18px;">The workshop aims to foster collaboration and stimulate innovation towards the development of next-generation AI research assistants that are reliable, transparent, and seamlessly integrated into the fabric of scientific discovery. Recent advancements in generative AI and agentic systems have unlocked the potential to automate and accelerate every stage of research, from hypothesis generation to paper writing. The rapid advancement of AI-assisted scientific research also brings social and ethical challenges. This workshop aims to advance the frontier of AI-assisted scientific research. Through a series of keynotes, panels, invited talks, paper presentations, and poster sessions, participants will have the opportunity to engage in cross-disciplinary discussions, share innovative ideas, and collaborate on solutions to current challenges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+
+    <!-- ======= Topics Section ======= -->
+    <section id="topic" class="section-with-bg">
+      <br>
+      <br>
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Topics</h2>
+          <p>The workshop will cover a range of topics, including but not limited to:</p>
+        </div>
+        <section id="topics">
+          <div class="container">
+            <!-- Topic 1 -->
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="topic-panel interactive-panel p-4 border shadow-sm rounded" style="background: #ffffff;">
+                  <b style="font-size: 18px; color: #343a40;">Autonomous AI Assistants for Scientific Research:</b>
+                  <p style="color: #6c757d; margin-top: 10px;">
+                    <ul>
+                      <li>Theoretical frameworks and system designs for autonomous research agents.</li>
+                      <li>Autonomous research systems that integrate multi-modal information (text, images, structural data) with external tools.</li>
+                      <li>Case studies of AI assistants conducting scientific research.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Topic 2 -->
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="topic-panel interactive-panel p-4 border shadow-sm rounded" style="background: #ffffff;">
+                  <b style="font-size: 18px; color: #343a40;">Datasets, Benchmarks and Evaluation Methods for AI-Assisted Scientific Research:</b>
+                  <p style="color: #6c757d; margin-top: 10px;">
+                    <ul>
+                      <li>Creation of large-scale, structured datasets for training and evaluating AI assistants and agents for scientific research.</li>
+                      <li>Novel benchmarks for end-to-end research tasks and specific scientific tasks, including automated literature review generation, experimental design, and scientific hypothesis generation.</li>
+                      <li>Quantitative and qualitative methods for evaluating the quality of AI-generated content.</li>
+                      <li>Frameworks for assessing reproducibility, interpretability, and robustness in AI-assisted research.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Topic 3 -->
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="topic-panel interactive-panel p-4 border shadow-sm rounded" style="background: #ffffff;">
+                  <b style="font-size: 18px; color: #343a40;">Human-AI Collaboration in Scientific Discovery:</b>
+                  <p style="color: #6c757d; margin-top: 10px;">
+                    <ul>
+                      <li>Exploration and comparison of different models of human-AI collaboration in the research workflow.</li>
+                      <li>Design of novel user interfaces and workflows that support seamless human-AI interaction in a scientific context.</li>
+                      <li>Studies on how AI tools influence the cognitive processes of human researchers.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Topic 4 -->
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="topic-panel interactive-panel p-4 border shadow-sm rounded" style="background: #ffffff;">
+                  <b style="font-size: 18px; color: #343a40;">Social Impact and Ethical Considerations in AI-Assisted Scientific Research:</b>
+                  <p style="color: #6c757d; margin-top: 10px;">
+                    <ul>
+                      <li>Identification and mitigation of biases and hallucinations that AI may introduce or amplify in scientific research.</li>
+                      <li>Ethical frameworks and safety guardrails for ensuring transparency, interpretability, and reproducibility in AI-driven research.</li>
+                      <li>Perspectives and discussions on the evolving role of AI in scientific discovery.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Topic 5 -->
+            <!-- <div class="row mb-4">
+              <div class="col-12">
+                <div class="topic-panel interactive-panel p-4 border shadow-sm rounded" style="background: #ffffff;">
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </section>
+      </div>
+      <br>
+      <br>
+    </section>
+    <!-- End Topics Section -->
+
+    <section id="cfp">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Call For Papers</h2>
+        </div>
+        <h3>Key Dates</h3>
+        <ul class="fa-ul">
+          <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Submission Deadline</b>: November 18, 2025 (AOE)</li>
+          <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Notification of Acceptance</b>: December 11, 2025 (AOE)</li>
+        </ul>
+        Deadlines are strict and will not be extended under any circumstances. All deadlines follow the <a href="https://time.is/Anywhere_on_Earth">Anywhere on Earth (AoE)</a> timezone.
+        <br>
+        <br>
+        <h3>Submission Format</h3>
+        <p>
+          All papers must be submitted in PDF format, using the AAAI-26 author kit. We welcome two types of papers:<br>
+          <b>Full papers</b>: Full-length research papers from 4 to 7 pages (excluding references and appendices).<br>
+          <b>Short papers</b>: Research/position papers of up to 4 pages (excluding references and appendices).<br><br>
+        </p>
+        <h3>Submission Site</h3>
+        <p>
+          The workshop uses OpenReview for paper submission and review. The submission link is <a href="https://openreview.net/group?id=AAAI.org/2026/Workshop/AI4Research">https://openreview.net/group?id=AAAI.org/2026/Workshop/AI4Research</a>.
+          <br>The review process will be single-blinded, and we welcome accepted and published papers. The contributions will be non-archival and only will be hosted on our workshop website. There will be one best paper award for accepted papers with outstanding quality.
+        </p> 
+      </div>
+    </section>
+
+    <!-- ======= Speakers Section ======= -->
+    <section id="speakers">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Invited Speakers</h2>
+          <!-- <p>To be announced</p> -->
+        </div>
+
+        <div class="row justify-content-center gx-3" style="max-width: 1000px; margin: 0 auto;">
+          
+          <!-- Speaker 1: Peter Clark -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="100" style="text-align: center;">
+              <img src="../assets/img/speakers/peter.jpg" alt="Peter Clark" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <br><a href="#" style="font-size: 1.4em; color: #00356B; font-weight: bold;">Peter Clark</a>
+              <p style="font-size: 1.1em; color: #666;">AI2</p>
+            </div>
+          </div>
+          
+          <!-- Speaker 2: Yue Zhang -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/speakers/yue.jpg" alt="Yue Zhang" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <br><a href="#" style="font-size: 1.4em; color: #00356B; font-weight: bold;">Yue Zhang</a>
+              <p style="font-size: 1.1em; color: #666;">Westlake</p>
+            </div>
+          </div>
+
+          <!-- Speaker 3: Chen Zhao -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300" style="text-align: center;">
+              <img src="../assets/img/speakers/chen.jpg" alt="Chen Zhao" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <br><a href="#" style="font-size: 1.4em; color: #00356B; font-weight: bold;">Chen Zhao</a>
+              <p style="font-size: 1.1em; color: #666;">NYU Shanghai</p>
+            </div>
+          </div>
+
+          <!-- Speaker 4: Chenglei Si -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="100" style="text-align: center;">
+              <img src="../assets/img/speakers/chenglei.jpg" alt="Chenglei Si" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <br><a href="#" style="font-size: 1.4em; color: #00356B; font-weight: bold;">Chenglei Si</a>
+              <p style="font-size: 1.1em; color: #666;">Stanford</p>
+            </div>
+          </div>
+
+          <!-- Speaker 5: Yi R. (May) Fung -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/speakers/fung.png" alt="Yi R. (May) Fung" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <br><a href="#" style="font-size: 1.4em; color: #00356B; font-weight: bold;">Yi R. (May) Fung</a>
+              <p style="font-size: 1.1em; color: #666;">HKUST</p>
+            </div>
+          </div>
+
+          <!-- Speaker 6: Min-Yen Kan -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300" style="text-align: center;">
+              <img src="../assets/img/speakers/min.png" alt="Min-Yen Kan" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+              <br><a href="#" style="font-size: 1.4em; color: #00356B; font-weight: bold;">Min-Yen Kan</a>
+              <p style="font-size: 1.1em; color: #666;">NUS</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Speakers Section -->
+
+    <!-- ======= Schedule Section ======= -->
+    <section id="schedule">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Schedule</h2>
+          <!-- <p>To be announced</p> -->
+        </div>
+        <div class="mb-3" style="text-align: center;">
+          <div class="recording-box" role="note" aria-label="Workshop recording link">
+            <div class="recording-box__title">
+              <i class="bi bi-camera-video-fill"></i>
+              Workshop Recording
+            </div>
+            <a class="recording-box__link" href="https://us06web.zoom.us/rec/play/0sh_Mu66z896POwoRGdp3qKG5eZ63UKPHvuIWT5KmIxOXnEGj0LGVykstHp04lRK4AiOjq2k1FFJ8JVZ.JPisdILXcQROBGdQ?eagerLoadZvaPages=&accessLevel=&canPlayFromShare=true&from=share_recording_detail&startTime=1769386400000&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus06web.zoom.us%2Frec%2Fshare%2FauvUcgWUnrnU0mSSdRT9ckHe9F9EbSozMqa6DYXpK3zf8lM3dir3rPl6QvTVUiU.i-wI4qAnmsWCiDzE%3FstartTime%3D1769386400000" target="_blank" rel="noopener noreferrer">
+              Watch the recording <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Time</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:50 – 09:00</td>
+              <td>Opening Remarks</td>
+            </tr>
+            <tr>
+              <td>09:00 – 09:40</td>
+              <td>
+                Invited Talk by <b style="color: #00356B;">Peter Clark</b><br>
+                <a data-bs-toggle="collapse" href="#abstract-peter" role="button" aria-expanded="false" aria-controls="abstract-peter" style="text-decoration: none; color: inherit; font-style: italic;">
+                  Title: From Research Tools to Long-Horizon AI-Assisted Science <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="../assets/slides/talk_peter.pptx" title="Slides (TBA)">slides</a>
+                <div class="collapse mt-2" id="abstract-peter">
+                  <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
+                    <b>Abstract:</b> AI has made remarkable progress in assisting with individual scientific tasks over the past two years. However, today's systems still fall far short of supporting the kind of long-horizon, "big science" research that unfolds over weeks or months. In this talk, I'll present our work on Asta, a state-of-the-art AI research assistant that performs a wide range of research tasks, and aims to scale toward long-term scientific support. I'll first illustrate Asta's current capabilities in literature understanding, data analysis, theory formation, and end-to-end autonomous software experiments. I'll then discuss what it takes to extend these capabilities to long-horizon research. If we view science as a search for predictive theories and causal explanations, then true long-term AI assistance requires a tight integration of experimentation and analysis with theory formation. I'll argue that this, in turn, demands a layer of structured reasoning above basic tool use to track hypotheses, evidence, and next experimental steps. I'll describe AutoDiscovery, our current work in this direction, then sketch our longer-term trajectory, and finally offer a perspective on the exciting future of long-horizon AI-assisted science.
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>09:40 – 10:20</td>
+              <td>
+                Invited Talk by <b style="color: #00356B;">Yue Zhang</b><br>
+                <a data-bs-toggle="collapse" href="#abstract-yue" role="button" aria-expanded="false" aria-controls="abstract-yue" style="text-decoration: none; color: inherit; font-style: italic;">
+                  Title: AI-driven Research Automation <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="../assets/slides/talk_yue.pptx" title="Slides (TBA)">slides</a>
+                <div class="collapse mt-2" id="abstract-yue">
+                  <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
+                    <b>Abstract:</b> Recently, AI has enabled efficiency tools to be developed for expediting research. Various agents have been built for automating literature review, idea generation, academic writing, and scholarly reviewing. Agents have also been constructed for automating the whole research pipeline. In this talk, I will share our research work along this line, covering work in two directions. First, I will discuss work on facilitating the review and publication paradigm, discussing how AI can be useful for recommending literature, making surveys and giving automated reviews. Second, I will discuss some efforts towards building automated AI scientists.
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>10:20 – 11:20</td>
+              <td><b style="color: blue;">Poster Session 1</b></td>
+            </tr>
+            <tr>
+              <td>11:20 – 12:00</td>
+              <td>
+                Invited Talk by <b style="color: #00356B;">Chen Zhao</b><br>
+                <a data-bs-toggle="collapse" href="#abstract-chen" role="button" aria-expanded="false" aria-controls="abstract-chen" style="text-decoration: none; color: inherit; font-style: italic;">
+                  Title: AI for Scientific Research with Better Agentic Search Systems <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="../assets/slides/talk_chen.pptx" title="Slides (TBA)">slides</a>
+                <div class="collapse mt-2" id="abstract-chen">
+                  <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
+                    <b>Abstract:</b> Agentic search systems such as OpenAI’s deep research have been widely deployed in AI for Scientific Research. Despite promising capabilities, today’s agentic search systems remain far from reliable, one of the pronouncing capacities is that they often retrieve irrelevant or redundant evidence. In this talk, I will discuss our recent efforts toward building better agentic search systems from different perspectives : 1) using text diffusion model as new promising architecture. 2) Benchmarking and Improving Retrieval for Deep Research Agents in Scientific Literature search.  I will discuss some future directions in the end of the talk.
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>12:00 – 12:40</td>
+              <td>
+                Invited Talk by <b style="color: #00356B;">Chenglei Si</b><br>
+                <a data-bs-toggle="collapse" href="#abstract-chenglei" role="button" aria-expanded="false" aria-controls="abstract-chenglei" style="text-decoration: none; color: inherit; font-style: italic;">
+                  Title: Towards Automated AI Research <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="../assets/slides/talk_chenglei.pdf" title="Slides (TBA)">slides</a>
+                <div class="collapse mt-2" id="abstract-chenglei">
+                  <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
+                    <b>Abstract:</b> Automated AI research holds great potential for accelerating scientific discovery and recursive self-improvement. In this talk, we first present a large-scale human study that rigorously examines whether LLMs can generate novel and effective research ideas. Then, we introduce our latest work on execution-grounded automated AI research, where LLMs propose ideas, implement them as code, run experiments on GPU clusters, and continuously learn from the execution results.  
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>12:40 – 13:20</td>
+              <td>Break &amp; <b style="color: blue;">Poster Session 3</b></td>
+            </tr>
+            <tr>
+              <td>13:20 – 14:00</td>
+              <td>
+                Invited Talk by <b style="color: #00356B;">Yi R. (May) Fung</b><br>
+                <a data-bs-toggle="collapse" href="#abstract-may" role="button" aria-expanded="false" aria-controls="abstract-may" style="text-decoration: none; color: inherit; font-style: italic;">
+                  Title: Building the Autonomous Research Scientist: From Exploration Mechanisms to Scholarly Integrity <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="../assets/slides/talk_may.pptx" title="Slides (TBA)">slides</a>
+                <div class="collapse mt-2" id="abstract-may">
+                  <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
+                    <b>Abstract:</b> The vision of an AI scientist, an agent that can autonomously discover, synthesize, and communicate new knowledge, is rapidly advancing beyond proof-of-concept. However, building such agents requires solving critical challenges at multiple stages of the research pipeline. In this talk, we will present a trilogy of works that address these core challenges. First, we will introduce Webwatcher, a vision-language deep research agent that breaks new frontiers by actively exploring and grounding its knowledge in real-world digital environments, moving beyond passive text analysis. Second, we will discuss our comprehensive survey, "Exploring Agentic MLLMs: A Survey for AIScientists", which provides the essential roadmap for AI scientists in terms of structuring the architectures and capabilities needed for such multimodal autonomous systems. Finally, I will address the cornerstone of scholarly trust: attribution. We will present CiteGuard, a novel framework for faithful citation validation that ensures the outputs of AI research agents are verifiable and credible. Together, these works form a cohesive vision for the next generation of AI4Research, where agents are not just tools for literature review, but active, trustworthy partners in the scientific process, capable of perception, synthesis, and rigorous scholarly communication.
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>14:00 – 14:50</td>
+              <td><b style="color: red;">Oral Session 1</b></td>
+            </tr>
+            <tr>
+              <td>14:50 – 15:50</td>
+              <td><b style="color: blue;">Poster Session 2</b></td>
+            </tr>
+            <tr>
+              <td>15:50 – 16:30</td>
+              <td>
+                Invited Talk by <b style="color: #00356B;">Min-Yen Kan</b><br>
+                <a data-bs-toggle="collapse" href="#abstract-kan" role="button" aria-expanded="false" aria-controls="abstract-kan" style="text-decoration: none; color: inherit; font-style: italic;">
+                  Title: The Research Manifold <i class="bi bi-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                </a>
+                <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-href="../assets/slides/talk_minyen.pptx" title="Slides (TBA)">slides</a>
+                <div class="collapse mt-2" id="abstract-kan">
+                  <div class="card card-body" style="font-size: 0.9rem; font-style: normal; color: #333;">
+                    <b>Abstract:</b> Imagine research as a complex, multidimensional vector space where human researchers are partially observable points in this space, with vectors of velocity and acceleration mapping, and where their new discoveries and publications mark observations. This research manifold is now being disrupted by the new entrant of artificially intelligent agents and tools. I describe my thoughts on some of the challenges ahead, as we progress to centaur-like human–AI research teams.
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>16:30 – 17:00</td>
+              <td><b style="color: red;">Oral Session 2</b></td>
+            </tr>
+            <tr>
+              <td>17:00 – 17:10</td>
+              <td>Paper Award</td>
+            </tr>
+            <tr>
+              <td>17:10 – 17:20</td>
+              <td>Closing Remarks</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- End Schedule Section -->
+
+    <!-- ======= Accepted Papers ======= -->
+    <section id="accepted-paper" class="section-with-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Accepted Papers</h2>
+        </div>
+        <div id="poster-presentations">
+          <ul id="posterList"></ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Accepted Papers -->
+
+    <!-- ======= Paper Awards Section ======= -->
+    <section id="paper-awards" class="section-with-bg" style="margin-top: -60px; padding-top: 60px;">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Paper Awards</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+              <h3 style="color: #00356B; margin-bottom: 15px; font-size: 1.3em;">
+                <i class="bi bi-trophy-fill" style="color: #FFD700; margin-right: 10px;"></i>Outstanding Paper Award
+              </h3>
+              <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 10px; color: #333;">
+                Does Less Hallucination Mean Less Creativity? An Empirical Investigation in LLMs
+              </p>
+              <p style="font-size: 1em; color: #666; margin-bottom: 0;">
+                Banerjee Mohor, Nadya Yuki Wangsajaya, Syed Ali Redha Alsagoff, Tan Min Sen, Zachary Choy Kit Chun, Alvin Chan
+              </p>
+            </div>
+            <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+              <h3 style="color: #00356B; margin-bottom: 15px; font-size: 1.3em;">
+                <i class="bi bi-trophy-fill" style="color: #FFD700; margin-right: 10px;"></i>Best Paper Award
+              </h3>
+              <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 10px; color: #333;">
+                CellForge: Agentic Design of Virtual Cell Models
+              </p>
+              <p style="font-size: 1em; color: #666; margin-bottom: 0;">
+                Xiangru Tang, Zhuoyun Yu, Jiapeng Chen, Yan Cui, Daniel Shao, Weixu Wang, Fang Wu, Yuchen Zhuang, Wenqi Shi, Zhi Huang, Xihong Lin, Fabian J Theis, Smita Krishnaswamy, Mark Gerstein
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Paper Awards Section -->
+
+    <!-- ======= Maps Section ======= -->
+    <section id="maps" class="section-with-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>AAAI-26 Map</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-center mb-3">Venue Map</h3>
+            <div style="height: 800px; width: 100%; border: 1px solid #ddd;">
+              <iframe src="../assets/img/maps/AAAI-26-Map.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-center mb-3">Poster Map (Level 2)</h3>
+            <div style="height: 800px; width: 100%; border: 1px solid #ddd;">
+              <iframe src="../assets/img/maps/Ancillary%20Program%20Level%202%20Poster%20Map.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-center mb-3">Poster Setup Example</h3>
+            <div class="text-center">
+              <img src="../assets/img/maps/Example%20of%20Level%202%20Poster%20Setup.png" class="img-fluid border" style="max-height: 800px;" alt="Poster Setup Example">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Maps Section -->
+
+    <section id="organizers">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Organizers</h2>
+          <p>This workshop is organized by</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/hui.png" alt="Hui Chen" class="img-fluid">
+              <br><a href="https://chchenhui.github.io/" style="font-size: 1.2em; color: #00356B;">Hui Chen</a></br>
+              <p>NUS</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/yilun.jpeg" alt="Yilun Zhao" class="img-fluid">
+              <br><a href="https://yilunzhao.github.io/" style="font-size: 1.2em; color: #00356B;">Yilun Zhao</a></br>
+              <p>Yale</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/manasi.jpeg" alt="Manasi Patwardhan" class="img-fluid">
+              <br><a href="https://scholar.google.com/citations?user=eAM84HQAAAAJ&hl=en" style="font-size: 1.2em; color: #00356B;">Manasi Patwardhan</a></br>
+              <p>TCS Research</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/tianyu.png" alt="Tianyu Yang" class="img-fluid">
+              <br><a href="https://tianyu-yang-anna.github.io/" style="font-size: 1.2em; color: #00356B;">Tianyu Yang</a></br>
+              <p>Notre Dame</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/yixin.jpg" alt="Yixin Liu" class="img-fluid">
+              <br><a href="https://yixinl7.github.io/" style="font-size: 1.2em; color: #00356B;">Yixin Liu</a></br>
+              <p>Yale</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/xiangliang.png" alt="Xiangliang Zhang" class="img-fluid">
+              <br><a href="https://sites.nd.edu/xiangliang-zhang/" style="font-size: 1.2em; color: #00356B;">Xiangliang Zhang</a></br>
+              <p>Notre Dame</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/see-kiong.jpg" alt="See-Kiong Ng" class="img-fluid">
+              <br><a href="https://www.comp.nus.edu.sg/~ngsk/index.htm" style="font-size: 1.2em; color: #00356B;">See-Kiong Ng</a></br>
+              <p>NUS</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/arman.jpg" alt="Arman Cohan" class="img-fluid">
+              <br><a href="https://armancohan.com/" style="font-size: 1.2em; color: #00356B;">Arman Cohan</a></br>
+              <p>Yale</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+              <img src="../assets/img/organizers/bryan.jpg" alt="Bryan Hooi" class="img-fluid">
+              <br><a href="https://bhooi.github.io/" style="font-size: 1.2em; color: #00356B;">Bryan Hooi</a></br>
+              <p>NUS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <br>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        <!-- &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved -->
+      </div>
+      <div class="credits">
+        Template adopted from <a href="https://workshop-llm-reasoning-planning.github.io/">Reasoning and Planning for Large Language Models @ ICLR 2025</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script> 
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- ======= Accepted Papers: load on page load ======= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const list = document.getElementById('posterList');
+      if (!list) return;
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function parseCsv(text) {
+        const rows = [];
+        let row = [];
+        let field = '';
+        let inQuotes = false;
+
+        for (let i = 0; i < text.length; i++) {
+          const c = text[i];
+
+          if (inQuotes) {
+            if (c === '"') {
+              const next = text[i + 1];
+              if (next === '"') {
+                field += '"';
+                i++;
+              } else {
+                inQuotes = false;
+              }
+            } else {
+              field += c;
+            }
+            continue;
+          }
+
+          if (c === '"') {
+            inQuotes = true;
+          } else if (c === ',') {
+            row.push(field);
+            field = '';
+          } else if (c === '\n') {
+            row.push(field);
+            rows.push(row);
+            row = [];
+            field = '';
+          } else if (c !== '\r') {
+            field += c;
+          }
+        }
+
+        if (field.length || row.length) {
+          row.push(field);
+          rows.push(row);
+        }
+
+        return rows;
+      }
+
+      function normalizeAuthors(authorsRaw) {
+        const raw = (authorsRaw || '').trim();
+        if (!raw) return '';
+        return raw
+          .split(';')
+          .map(function (s) { return s.trim(); })
+          .filter(Boolean)
+          .join(', ');
+      }
+
+      function fetchFirstOk(urls) {
+        return Promise.resolve().then(function () {
+          return urls.reduce(function (p, url) {
+            return p.catch(function () {
+              return fetch(url).then(function (r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url);
+                return r.text();
+              });
+            });
+          }, Promise.reject(new Error('no urls attempted')));
+        });
+      }
+
+      fetchFirstOk(['accepted_papers.csv', 'accepted_paper.csv'])
+        .then(function (csvText) {
+          const rows = parseCsv(csvText);
+          rows.slice(1).forEach(function (cols) {
+            const paperId = (cols && cols[0]) ? String(cols[0]).trim() : '';
+            const titleRaw = (cols && cols[1]) ? cols[1] : '';
+            const authorsRaw = (cols && cols[3]) ? cols[3] : '';
+            const isOral = (cols && cols[5] && cols[5].trim().toLowerCase() === 'oral');
+            const presentationId = (cols && cols[6]) ? cols[6].trim() : '';
+            const wsId = (cols && cols[7]) ? cols[7].trim() : '';
+
+            const title = titleRaw.replace(/\s+/g, ' ').trim();
+            const authors = normalizeAuthors(authorsRaw);
+            if (!title) return;
+
+            // Time mapping
+            let timeInfo = '';
+            let presentationType = '';
+            
+            if (isOral) {
+                presentationType = 'Oral Presentation';
+                // Determine Oral number from presentationId e.g. "Oral 1"
+                if (presentationId === 'Oral 1') timeInfo = '14:00 - 14:15';
+                else if (presentationId === 'Oral 2') timeInfo = '14:15 - 14:30';
+                else if (presentationId === 'Oral 3') timeInfo = '14:30 - 14:45';
+                else if (presentationId === 'Oral 4') timeInfo = '16:30 - 16:45';
+                else if (presentationId === 'Oral 5') timeInfo = '16:45 - 17:00';
+            } else if (presentationId.startsWith('Poster')) {
+                presentationType = 'Poster Presentation';
+                if (wsId) {
+                    presentationType += ' (' + wsId + ')';
+                }
+                if (presentationId === 'Poster 1') timeInfo = '10:20 - 11:20';
+                else if (presentationId === 'Poster 2') timeInfo = '14:50 - 15:50';
+                else if (presentationId === 'Poster 3') timeInfo = '12:40 - 13:20';
+            }
+
+            const li = document.createElement('li');
+            let slidesHtml = '';
+            if (isOral) {
+              // Convention: put slides at ../assets/slides/<paperId>.(pdf|pptx|ppt)
+              // Default is a disabled placeholder; becomes clickable if file exists
+              const oralSlidesBase = '../assets/slides/' + encodeURIComponent(paperId);
+              slidesHtml = ' <a class="slides-box slides-box--disabled" href="#" aria-disabled="true" data-slides-base="' + oralSlidesBase + '" title="Slides (TBA)" data-paper-id="' + escapeHtml(paperId) + '">slides</a>';
+            }
+            li.innerHTML = '<b>' + escapeHtml(title) + '</b>' + slidesHtml + '<br>' + escapeHtml(authors);
+            
+            if (timeInfo) {
+                const colorStyle = isOral ? 'color: red;' : 'color: blue;';
+                li.innerHTML += '<br><span style="' + colorStyle + ' font-weight: bold;">' + presentationType + ' - ' + timeInfo + '</span>';
+            }
+            
+            list.appendChild(li);
+            list.appendChild(document.createElement('br'));
+          });
+        })
+        .catch(function (err) {
+          console.error('Error loading accepted papers CSV:', err);
+        });
+    });
+
+    // Slides: disabled by default; auto-enable if file exists
+    window.addEventListener('load', function () {
+      const slidesLinks = document.querySelectorAll('a.slides-box[data-slides-href], a.slides-box[data-slides-base]');
+      slidesLinks.forEach(function (a) {
+        const explicitHref = a.getAttribute('data-slides-href');
+        const base = a.getAttribute('data-slides-base');
+        const candidates = explicitHref
+          ? [explicitHref]
+          : (base ? [base + '.pdf', base + '.pptx', base + '.ppt'] : []);
+        if (!candidates.length) return;
+
+        // Enable only if the file exists (same-origin static assets)
+        candidates.reduce(function (p, href) {
+          return p.catch(function () {
+            return fetch(href, { method: 'HEAD' }).then(function (r) {
+              if (!r.ok) throw new Error('not found');
+              a.classList.remove('slides-box--disabled');
+              a.removeAttribute('aria-disabled');
+              a.setAttribute('href', href);
+              a.setAttribute('target', '_blank');
+              a.setAttribute('rel', 'noopener noreferrer');
+              a.setAttribute('title', 'Slides: ' + href);
+              return true;
+            });
+          });
+        }, Promise.reject(new Error('no candidates')))
+        .catch(function () {
+          // Keep placeholder
+        });
+      });
+    });
+  </script>
+
+  <a href="https://info.flagcounter.com/fIO5"><img src="https://s05.flagcounter.com/count2/fIO5/bg_FFFFFF/txt_000000/border_CCCCCC/columns_6/maxflags_20/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" class="img-fluid" border="0"></a>
+
+</body>
+
+</html>
