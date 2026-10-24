@@ -25,5 +25,7 @@ Run `python3 -m http.server 8000` from the repository root and open
   portal after OpenReview approves and deploys it, then change “Opening soon”.
 - Add speakers, the detailed program, accepted papers, and awards as available.
   Keep each year's content separate when adding future editions.
+- Sort organizer and speaker cards A–Z by their displayed English names.
+  Keep schedule entries in chronological order.
 
 Contact: hui.chen@nus.edu.sg or yilun.zhao@yale.edu.
