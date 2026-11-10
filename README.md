@@ -19,10 +19,9 @@ Run `python3 -m http.server 8000` from the repository root and open
   `assets/` so existing resource URLs remain usable.
 - Confirm the workshop day before replacing the date placeholder. February
   22–23 is the overall AAAI workshop program, not a two-day AI4Research schedule.
-- The 2027 submission deadline is November 20, 2026, 23:59 AoE; notifications
-  are December 2, 2026. The [OpenReview venue request](https://openreview.net/forum?id=uKUss0nIMM)
-  was submitted for `AAAI.org/2027/Workshop/AI4Research`. Link the submission
-  portal after OpenReview approves and deploys it, then change “Opening soon”.
+- The 2027 submission deadline is December 10, 2026, 23:59 AoE; notifications
+  are January 8, 2027. The submission portal is
+  [OpenReview](https://openreview.net/group?id=AAAI.org/2027/Workshop/AI4Research).
 - Add speakers, the detailed program, accepted papers, and awards as available.
   Keep each year's content separate when adding future editions.
 - Sort organizer and speaker cards A–Z by their displayed English names.
